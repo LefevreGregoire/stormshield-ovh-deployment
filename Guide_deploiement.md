@@ -113,22 +113,24 @@ Ouvrir `cmd.exe` et taper :
 ping 10.0.0.254
 ```
 
-Résultat attendu :
-    Reply from 10.0.0.254: bytes=32 time<1ms TTL=64
+> **Résultat attendu :**
+> `Reply from 10.0.0.254: bytes=32 time<1ms TTL=64`
 
 ### 4.2 Accès à l'Administration (WebAdmin)
 
 Depuis le navigateur du Windows Server (Edge/Chrome) :
 
-    Aller sur : https://10.0.0.254/admin
+1. Aller sur : `https://10.0.0.254/admin`
+2. Accepter l'alerte de certificat de sécurité (Self-signed).
+3. La page de login du Stormshield doit s'afficher.
 
-    Accepter l'alerte de certificat de sécurité (Self-signed).
+---
 
-    La page de login du Stormshield doit s'afficher.
+## 5️⃣ Dépannage (Troubleshooting)
 
-5️⃣ Dépannage (Troubleshooting)
-Symptôme	Cause probable	Solution
-Ping échoue (Timeout)	Windows Firewall actif	Désactiver le pare-feu Windows ou autoriser ICMPv4.
-Ping échoue (Unreachable)	Mauvaise IP / Masque	Vérifier que Windows est bien en /8 (255.0.0.0).
-Erreur 501 sur le Web	Service SNS planté	Le fichier /usr/Firewall/ConfigFiles/network contient une erreur de syntaxe.
-Pas d'Internet sur Windows	Règles de filtrage	Le Stormshield bloque le trafic sortant par défaut. Il faut créer une règle Pass All dans la politique de sécurité.
+| Symptôme | Cause probable | Solution |
+| :--- | :--- | :--- |
+| **Ping échoue (Timeout)** | Windows Firewall actif | Désactiver le pare-feu Windows ou autoriser ICMPv4. |
+| **Ping échoue (Unreachable)** | Mauvaise IP / Masque | Vérifier que Windows est bien en `/8` (255.0.0.0). |
+| **Erreur 501 sur le Web** | Service SNS planté | Le fichier `/usr/Firewall/ConfigFiles/network` contient une erreur de syntaxe. |
+| **Pas d'Internet sur Windows** | Règles de filtrage | Le Stormshield bloque le trafic sortant par défaut. Il faut créer une règle `Pass All` dans la politique de sécurité. |
