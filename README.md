@@ -28,11 +28,11 @@ Le réseau est segmenté en deux zones distinctes :
 
 ## Fonctionnalités implémentées
 
-* [x] Création du vSwitch privé sur OpenStack (OVH).
-* [x] Déploiement de l'instance Stormshield via image Cloud.
-* [x] Configuration bas niveau (Shell FreeBSD) des interfaces réseaux.
-* [x] Configuration statique du client Windows Server.
-* [x] Validation des flux ICMP et accès WebAdmin sécurisé.
+* Création du vSwitch privé sur OpenStack (OVH).
+* Déploiement de l'instance Stormshield via image Cloud.
+* Configuration bas niveau (Shell FreeBSD) des interfaces réseaux.
+* Configuration statique du client Windows Server.
+* Validation des flux ICMP et accès WebAdmin sécurisé.
 
 ## Schéma 
 
