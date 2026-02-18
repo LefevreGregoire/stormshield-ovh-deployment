@@ -50,10 +50,11 @@ Le Stormshield démarre par défaut en DHCP sur le WAN, mais l'interface LAN est
 Les interfaces physiques virtuelles sont nommées `vtnet0` (WAN) et `vtnet1` (LAN).
 
 1.  Vérifier l'état actuel :
+
     ```bash
     ifconfig
     ```
-2.  Éditer (ou écraser) le fichier de configuration réseau pour définir notre plan d'adressage `10.0.0.x`.
+3.  Éditer (ou écraser) le fichier de configuration réseau pour définir notre plan d'adressage `10.0.0.x`.
     *Tapez la commande suivante pour écrire la configuration propre :*
 
     ```bash
@@ -70,7 +71,8 @@ Les interfaces physiques virtuelles sont nommées `vtnet0` (WAN) et `vtnet1` (LA
     echo "Mask=255.0.0.0" >> /usr/Firewall/ConfigFiles/network
     ```
 
-3.  Appliquer les changements par un redémarrage :
+4.  Appliquer les changements par un redémarrage :
+
     ```bash
     reboot
     ```
@@ -96,7 +98,8 @@ Par défaut, Windows bloque les réponses au Ping (ICMP) sur les réseaux qu'il 
 
 1.  Ouvrir une invite de commande (cmd) en Administrateur.
 2.  Désactiver le pare-feu pour le profil courant (ou créer une règle ICMP) :
-    ```cmd
+
+    ```DOS
     netsh advfirewall set allprofiles state off
     ```
     *(Note : En production, privilégiez la création d'une règle spécifique d'autorisation).*
@@ -126,7 +129,7 @@ Depuis le navigateur du Windows Server (Edge/Chrome) :
 
 ---
 
-## 5️⃣ Dépannage (Troubleshooting)
+## 5 Dépannage (Troubleshooting)
 
 | Symptôme | Cause probable | Solution |
 | :--- | :--- | :--- |
